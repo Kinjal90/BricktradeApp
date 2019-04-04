@@ -23,7 +23,7 @@ export class CongratesScreen extends Component {
     },
     headerRight: (<View />),
     headerLeft: (<View />),
-    tabBarLabel: 'BrickX',
+    tabBarLabel: 'Congrates',
     tabBarIcon: ({ tintColor }) => <Image source={BrickX} style={{ tintColor }} />,
   });
 

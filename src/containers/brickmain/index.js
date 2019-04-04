@@ -3,6 +3,7 @@ import { StackNavigator, TabNavigator, TabBarTop, View, Button } from 'react-nav
 import { COLOR as colors } from 'react-native-material-ui';
 import CongratesScreen from './CongratesScreen';
 import HomeScreen from './HomeScreen';
+import DetailScreen from './DetailScreen';
 import AccountScreen from './AccountScreen';
 import BrickLocationScreen from './BrickLocationScreen';
 import ProfileScreen from './ProfileScreen';
@@ -18,7 +19,14 @@ const components = {
     //   // tabBarVisible: false,
     // }
   },
-  Home: { screen: HomeScreen },
+  // Home: { screen: HomeScreen },
+  Home: { screen: StackNavigator({
+    Home: { screen: HomeScreen },
+    HomeDetail: { screen: DetailScreen },
+  }, {
+    headerMode: 'screen',
+    initialRouteName: 'Home',
+  }) },
   Account: { screen: AccountScreen },
   Brick360: { screen: BrickLocationScreen },
   Profile: { screen: ProfileScreen },

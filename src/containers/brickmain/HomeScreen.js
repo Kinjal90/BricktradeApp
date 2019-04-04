@@ -11,7 +11,7 @@ import Modal from 'react-native-modal';
 
 export class HomeScreen extends Component {
   static navigationOptions = () => ({
-    title: 'Home',
+    title: '',
     headerStyle: {
       backgroundColor: colors.white,
       elevation: 0,
@@ -84,6 +84,15 @@ export class HomeScreen extends Component {
           text="Home Page"
           upperCase={false}
           onPress={this._toggleModal}
+          style={homeButton}
+        />
+
+        <Button
+          primary
+          title=""
+          text="Open Detail"
+          upperCase={false}
+          onPress={() => { this.props.navigation.navigate('HomeDetail'); }}
           style={homeButton}
         />
 

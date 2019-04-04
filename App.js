@@ -10,11 +10,10 @@ export default class App extends Component {
   render() {
     const AppNavigator = SwitchNavigator({
         MainScreen: { screen: MainScreen },
-        // CongratesScreen: { screen: CongratesScreen },
         TabScreen: { screen: TabScreen },
     }, {
         headerMode: 'screen',
-        initialRouteName: 'TabScreen',
+        initialRouteName: 'MainScreen',
     });
 
     return (

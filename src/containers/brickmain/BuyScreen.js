@@ -3,15 +3,31 @@ import React, { Component } from 'react';
 import { View, Text, Image, Platform, StatusBar, TouchableOpacity, Dimensions  } from 'react-native';
 import { COLOR as colors } from 'react-native-material-ui';
 import styles from '../../styles/buy';
-import Account from '../../assets/images/ic_account.png';
+import LeftArrow from '../../assets/images/leftarrow.png';
+import Notification from '../../assets/images/notification.png';
 import Person from '../../assets/images/person.jpg';
 import ArrowRight from '../../assets/images/rightarrow.png';
 import LinearGradient from 'react-native-linear-gradient';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
+import Icon from 'react-native-vector-icons/MaterialIcons';
 
 export class BuyScreen extends Component {
   static navigationOptions = () => ({
-    header: null,
+    headerStyle: {
+      backgroundColor: colors.transparent,
+      elevation: 0,
+      shadowOpacity: 0,
+      borderBottomWidth: 0,
+      // paddingTop: Platform.OS === 'ios' ? 0 : StatusBar.currentHeight + 10,
+      headerTintColor: colors.black,
+      headerTitleStyle: { color: 'black' }
+    },
+    headerLeft: (
+      <Image source={LeftArrow}  style={{ marginLeft: 10, height: 30, width: 30 }}/>
+    ),
+    headerRight: (
+      <Image source={Notification}  style={{ marginRight: 10, height: 20, width: 20 }}/>
+    ),
     tabBarLabel: ' ',
     tabBarIcon: ({ tintColor }) =>  <LinearGradient
       colors={['rgb(255,55,64)', 'rgb(255,55,119)', 'rgb(255, 44, 163)']}
@@ -38,6 +54,12 @@ export class BuyScreen extends Component {
     return (
       <View style={styles.mainBack}>
         <KeyboardAwareScrollView>
+          {/* <StatusBar
+            hidden={false}
+            animated
+            barStyle="dark-content"
+          /> */}
+
           <Text style={styles.title}>
             Review
           </Text>
@@ -150,13 +172,7 @@ export class BuyScreen extends Component {
           <View style={styles.buttonMainContainer}>
             <LinearGradient
                 colors={['#FF5050', '#FB54AD']}
-                style={{
-                  height: 48,
-                  width: width - 100,
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  borderRadius: 5,
-                }}
+                style={styles.buttonOuterContainer}
             >
               <TouchableOpacity
                 style={styles.buttonContainer}

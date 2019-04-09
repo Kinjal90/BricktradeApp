@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { StackNavigator, TabNavigator, TabBarTop } from 'react-navigation';
 import { COLOR as colors } from 'react-native-material-ui';
-import CongratesScreen from './CongratesScreen';
 import HomeScreen from './HomeScreen';
 import DetailScreen from './DetailScreen';
 import AccountScreen from './AccountScreen';
@@ -9,30 +8,9 @@ import DebitCardScreen from './DebitCardScreen';
 import BrickLocationScreen from './BrickLocationScreen';
 import ProfileScreen from './ProfileScreen';
 import BuyScreen from './BuyScreen';
-// import CustomTabBarBottom from '../../components/CustomTabBarBottom';
-
-const navigationConfig = {
-  initialRouteName: 'Places',
-  headerMode: 'float',
-  navigationOptions: {
-    title: 'App Name',
-    header: ({ state, setParams }) => ({
-      style: { backgroundColor: 'green' }
-    })
-  }
-}
 
 const components = {
-  // Congrates: { 
-  //   screen: CongratesScreen,
-  // },
-  Home: { screen: StackNavigator({
-    Home: { screen: HomeScreen },
-    HomeDetail: { screen: DetailScreen },
-  }, {
-    headerMode: 'screen',
-    initialRouteName: 'Home',
-  }) },
+  Home: { screen: HomeScreen },
   Account: { screen: AccountScreen },
   Buy: { screen: StackNavigator({
     Buy: { screen: BuyScreen },
@@ -56,6 +34,9 @@ const TabScreen = TabNavigator(components, {
     iconStyle: {
       // marginTop: 10,
     },
+    indicatorStyle: {
+      opacity: 0,
+    },
     upperCaseLabel: false,
     labelStyle: {
       fontSize: 10,
@@ -65,7 +46,8 @@ const TabScreen = TabNavigator(components, {
     showLabel: true,
     style: {
       borderTopColor: colors.grey100,
-      borderBottomWidth: 2
+      borderBottomWidth: 2,
+      backgroundColor: 'white',
     },
   },
   tabStyle: {
@@ -73,7 +55,6 @@ const TabScreen = TabNavigator(components, {
     alignItems: 'center',
   },
   tabBarPosition: 'bottom',
-  hiddenTabs: ['CongratesScreen']
 });
 
 export default TabScreen;

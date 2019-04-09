@@ -8,10 +8,10 @@ const styles = StyleSheet.create({
   mainBack: {
     width: '100%',
     height: '100%',
-    paddingTop: 50,
+    // paddingTop: 50,
   },
   title: {
-    marginTop: 20,
+    // marginTop: 20,
     fontSize: 22,
     color: colors.black,
 
@@ -104,8 +104,16 @@ const styles = StyleSheet.create({
     height: 50,
     width: 50,
   },
+  buttonOuterContainer: {
+    height: 48,
+    width: width - 100,
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: 5,
+  },
   buttonContainer: {
     width: width - 100 - 4,
+    height: 48 - 4,
     alignItems: 'center',
     backgroundColor: colors.white,
     marginLeft: 2,

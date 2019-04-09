@@ -10,20 +10,21 @@ const styles = StyleSheet.create({
     height: '100%',
   },
   container: {
-    position: 'absolute',
-    bottom: 0,
+    // position: 'absolute',
+    // bottom: 0,
   },
   bottomModal: {
-    justifyContent: "flex-end",
-    margin: 0,
+    // justifyContent: "flex-end",
+    // margin: 0,
+    // backgroundColor: colors.red100,
   },
   inputModexBox: {
     borderRadius: 5,
     borderWidth: 1,
     borderColor: '#dfdde8',
     width: '80%',
-    paddingHorizontal: 4,
-    height: 40,
+    // padding: 5,
+    // height: 40,
     justifyContent: 'center', 
   },
   modelTextInput: {
@@ -31,9 +32,10 @@ const styles = StyleSheet.create({
     fontWeight: '600',
     fontSize: 20,
     marginLeft: 5,
+    padding: 10,
   },
   title: {
-    marginTop: 20,
+    // marginTop: 20,
     fontSize: 22,
     color: colors.black,
 

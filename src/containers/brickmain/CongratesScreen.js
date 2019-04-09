@@ -4,7 +4,6 @@ import { COLOR as colors } from 'react-native-material-ui';
 import styles from '../../styles/congrates';
 import BrickX from '../../assets/images/ic_home.png';
 import Congrates from '../../assets/images/congrates.png';
-// import console = require('console');
 
 export class CongratesScreen extends Component {
   static navigationOptions = () => ({

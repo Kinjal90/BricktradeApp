@@ -8,7 +8,7 @@ const styles = StyleSheet.create({
   mainBack: {
     width: '100%',
     height: '100%',
-    backgroundColor: 'white',
+    // backgroundColor: 'white',
     padding: 10,
   },
   title: {

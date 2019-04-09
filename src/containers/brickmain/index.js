@@ -1,25 +1,31 @@
 import React, { Component } from 'react';
-import { StackNavigator, TabNavigator, TabBarTop, View, Button } from 'react-navigation';
+import { StackNavigator, TabNavigator, TabBarTop } from 'react-navigation';
 import { COLOR as colors } from 'react-native-material-ui';
 import CongratesScreen from './CongratesScreen';
 import HomeScreen from './HomeScreen';
 import DetailScreen from './DetailScreen';
 import AccountScreen from './AccountScreen';
+import DebitCardScreen from './DebitCardScreen';
 import BrickLocationScreen from './BrickLocationScreen';
 import ProfileScreen from './ProfileScreen';
+import BuyScreen from './BuyScreen';
 // import CustomTabBarBottom from '../../components/CustomTabBarBottom';
 
+const navigationConfig = {
+  initialRouteName: 'Places',
+  headerMode: 'float',
+  navigationOptions: {
+    title: 'App Name',
+    header: ({ state, setParams }) => ({
+      style: { backgroundColor: 'green' }
+    })
+  }
+}
+
 const components = {
-  Congrates: { 
-    screen: CongratesScreen,
-    // tabBarOptions: {
-    //   visible: false,
-    // }
-    // navigationOptions: {
-    //   // tabBarVisible: false,
-    // }
-  },
-  // Home: { screen: HomeScreen },
+  // Congrates: { 
+  //   screen: CongratesScreen,
+  // },
   Home: { screen: StackNavigator({
     Home: { screen: HomeScreen },
     HomeDetail: { screen: DetailScreen },
@@ -28,25 +34,27 @@ const components = {
     initialRouteName: 'Home',
   }) },
   Account: { screen: AccountScreen },
+  Buy: { screen: StackNavigator({
+    Buy: { screen: BuyScreen },
+    DebitCard: { screen: DebitCardScreen },
+  }, {
+    headerMode: 'screen',
+    initialRouteName: 'Buy',
+  }) },
   Brick360: { screen: BrickLocationScreen },
   Profile: { screen: ProfileScreen },
 };
 
 const TabScreen = TabNavigator(components, {
-  initialRouteName: 'Congrates',
-  lazy: false,
-  swipeEnabled: false,
-  tabBarComponent: TabBarTop,
+  initialRouteName: 'Buy',
   animationEnabled: false,
   tabBarOptions: {
-    activeTintColor: colors.pink300,
-    inactiveBackgroundColor: colors.black,
-    inactiveTintColor: colors.black,
+    activeTintColor: 'rgb(254,0,138)',
+    inactiveTintColor: 'rgb(83,101,119)',
+    activeBackgroundColor: 'white',
+    inactiveBackgroundColor: 'white',
     iconStyle: {
-      marginTop: 10,
-    },
-    indicatorStyle: {
-      opacity: 0,
+      // marginTop: 10,
     },
     upperCaseLabel: false,
     labelStyle: {
@@ -56,7 +64,8 @@ const TabScreen = TabNavigator(components, {
     showIcon: true,
     showLabel: true,
     style: {
-      backgroundColor: '#f9f9f9',
+      borderTopColor: colors.grey100,
+      borderBottomWidth: 2
     },
   },
   tabStyle: {
@@ -65,7 +74,6 @@ const TabScreen = TabNavigator(components, {
   },
   tabBarPosition: 'bottom',
   hiddenTabs: ['CongratesScreen']
-  // tabBarComponent: (props) => <CustomTabBarBottom {...props} />
 });
 
 export default TabScreen;

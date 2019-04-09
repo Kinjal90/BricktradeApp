@@ -10,7 +10,7 @@ export class MainScreen extends Component {
         <Button
           primary
           title=""
-          text="Click Me"
+          text="Start"
           upperCase={false}
           onPress={() => { this.props.navigation.navigate('TabScreen'); }}
           style={loginButton}

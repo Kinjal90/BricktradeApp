@@ -67,8 +67,9 @@
 		F28EA16E8BDA444ABCEE387D /* MaterialCommunityIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 70AD2339AFC24FE5ACE60C01 /* MaterialCommunityIcons.ttf */; };
 		F3F0E508B57E422EA79F1923 /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E03BE5D2723642A082FE97A8 /* Ionicons.ttf */; };
 		FB9FDD02577D4990A6241FEB /* FontAwesome5_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E944ACDEC8494127BD42620B /* FontAwesome5_Regular.ttf */; };
-		0D7F1DE8FB4344D19B793668 /* WorkSans-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = AF2B36C23EF64DB7B5A55FEA /* WorkSans-Medium.otf */; };
-		2C50857AD2FE4F91910D563F /* WorkSans-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = E4237D27B8BF45CA97B1F4BC /* WorkSans-Regular.otf */; };
+		718A27D0DCAD472799F3C7DB /* WorkSans-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8EFFF211764B4987940D6591 /* WorkSans-Regular.otf */; };
+		D39EB0149AC54110A6516C68 /* WorkSans-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7F83207FD9EC481C89D6CA3C /* WorkSans-Bold.otf */; };
+		2947A7A5865149DF84D01071 /* WorkSans-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 539DEC4355DA43C79C4381A7 /* WorkSans-Medium.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -435,8 +436,9 @@
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
 		EE154C0979DC4D689D5CCD81 /* RangeSlider.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RangeSlider.xcodeproj; path = "../node_modules/react-native-range-slider/ios/RangeSlider.xcodeproj"; sourceTree = "<group>"; };
 		F2CD91E18B184AF98DBEE8FA /* Octicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Octicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; };
-		AF2B36C23EF64DB7B5A55FEA /* WorkSans-Medium.otf */ = {isa = PBXFileReference; name = "WorkSans-Medium.otf"; path = "../src/assets/fonts/WorkSans-Medium.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		E4237D27B8BF45CA97B1F4BC /* WorkSans-Regular.otf */ = {isa = PBXFileReference; name = "WorkSans-Regular.otf"; path = "../src/assets/fonts/WorkSans-Regular.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		8EFFF211764B4987940D6591 /* WorkSans-Regular.otf */ = {isa = PBXFileReference; name = "WorkSans-Regular.otf"; path = "../src/assets/fonts/WorkSans-Regular.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		7F83207FD9EC481C89D6CA3C /* WorkSans-Bold.otf */ = {isa = PBXFileReference; name = "WorkSans-Bold.otf"; path = "../src/assets/fonts/WorkSans-Bold.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		539DEC4355DA43C79C4381A7 /* WorkSans-Medium.otf */ = {isa = PBXFileReference; name = "WorkSans-Medium.otf"; path = "../src/assets/fonts/WorkSans-Medium.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -790,8 +792,9 @@
 				F2CD91E18B184AF98DBEE8FA /* Octicons.ttf */,
 				5382ED01E9F34D01B3FDB158 /* SimpleLineIcons.ttf */,
 				A5ADDE6770844B159E0038B2 /* Zocial.ttf */,
-				AF2B36C23EF64DB7B5A55FEA /* WorkSans-Medium.otf */,
-				E4237D27B8BF45CA97B1F4BC /* WorkSans-Regular.otf */,
+				8EFFF211764B4987940D6591 /* WorkSans-Regular.otf */,
+				7F83207FD9EC481C89D6CA3C /* WorkSans-Bold.otf */,
+				539DEC4355DA43C79C4381A7 /* WorkSans-Medium.otf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -1300,8 +1303,9 @@
 				D36BEA64DFE94EEA9503588E /* Octicons.ttf in Resources */,
 				9081A1DA65C74CCF8CC64F6F /* SimpleLineIcons.ttf in Resources */,
 				D0FD8A7F38544C2A82701277 /* Zocial.ttf in Resources */,
-				0D7F1DE8FB4344D19B793668 /* WorkSans-Medium.otf in Resources */,
-				2C50857AD2FE4F91910D563F /* WorkSans-Regular.otf in Resources */,
+				718A27D0DCAD472799F3C7DB /* WorkSans-Regular.otf in Resources */,
+				D39EB0149AC54110A6516C68 /* WorkSans-Bold.otf in Resources */,
+				2947A7A5865149DF84D01071 /* WorkSans-Medium.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

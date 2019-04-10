@@ -79,20 +79,23 @@ const TabScreen = TabNavigator(components, {
         }}
       >
       {navigationState.routes.map((route, idx) => {
-        // const color = navigationState.index === idx ? activeTintColor : inactiveTintColor;
         const focused = idx === navigationState.index;
         const tintColor = focused ? activeTintColor : inactiveTintColor;
 
         return (idx == 2)
-        ? 
+        ?
           (
-            <TouchableOpacity onPress={() => navigation.navigate('Buy')}>
+            <TouchableOpacity
+              key={idx}
+              style={{ padding: 10 }}
+              onPress={() => navigation.navigate('Buy')}
+            >
               <LinearGradient
                 colors={['rgb(255,55,64)', 'rgb(255,55,119)', 'rgb(255, 44, 163)']}
                 style={{
                   width: 60,
                   height: 60,
-                  backgroundColor: 'rgb(254,0,138)',
+                  // backgroundColor: 'rgb(254,0,138)',
                   position: 'absolute',
                   bottom: 0,
                   borderRadius: 30,
@@ -102,7 +105,7 @@ const TabScreen = TabNavigator(components, {
                   zIndex: 999,
                 }}
               >
-                <Text style={{ color: 'white' }}>Buy</Text>
+                <Text style={{ color: colors.white }}>Buy</Text>
               </LinearGradient>
             </TouchableOpacity>
           )

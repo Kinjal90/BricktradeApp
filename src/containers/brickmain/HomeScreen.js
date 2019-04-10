@@ -22,7 +22,7 @@ export class HomeScreen extends Component {
     },
     headerRight: (<View />),
     headerLeft: (<View />),
-    tabBarLabel: 'Account',
+    tabBarLabel: 'BrickX',
     tabBarIcon: ({ tintColor }) => <Image source={Home} style={{ tintColor }} />,
   });
 

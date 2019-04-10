@@ -32,25 +32,25 @@ export class BuyScreen extends Component {
       <Image source={Notification}  style={{ marginRight: 10, height: 20, width: 20 }}/>
     ),
     tabBarLabel: ' ',
-    tabBarIcon: ({ tintColor }) =>  
-      <LinearGradient
-        colors={['rgb(255,55,64)', 'rgb(255,55,119)', 'rgb(255, 44, 163)']}
-        style={{
-          width: 60,
-          height: 60,
-          backgroundColor: 'rgb(254,0,138)',
-          position: 'absolute',
-          bottom: 0,
-          borderRadius: 30,
-          justifyContent: 'center',
-          alignItems: 'center',
-          alignSelf: 'center',
-          zIndex: 999,
-          // flex: 0.1,
-        }}
-      >
-        <Text style={{ color: 'white' }}>Buy</Text>
-    </LinearGradient>,
+    // tabBarIcon: ({ tintColor }) =>  
+    //   <LinearGradient
+    //     colors={['rgb(255,55,64)', 'rgb(255,55,119)', 'rgb(255, 44, 163)']}
+    //     style={{
+    //       width: 60,
+    //       height: 60,
+    //       backgroundColor: 'rgb(254,0,138)',
+    //       position: 'absolute',
+    //       bottom: 0,
+    //       borderRadius: 30,
+    //       justifyContent: 'center',
+    //       alignItems: 'center',
+    //       alignSelf: 'center',
+    //       zIndex: 999,
+    //       // flex: 0.1,
+    //     }}
+    //   >
+    //     <Text style={{ color: 'white' }}>Buy</Text>
+    // </LinearGradient>,
   });
 
   render() {

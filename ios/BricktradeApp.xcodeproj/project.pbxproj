@@ -70,6 +70,7 @@
 		718A27D0DCAD472799F3C7DB /* WorkSans-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8EFFF211764B4987940D6591 /* WorkSans-Regular.otf */; };
 		D39EB0149AC54110A6516C68 /* WorkSans-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7F83207FD9EC481C89D6CA3C /* WorkSans-Bold.otf */; };
 		2947A7A5865149DF84D01071 /* WorkSans-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 539DEC4355DA43C79C4381A7 /* WorkSans-Medium.otf */; };
+		CFCC67AC98884E87A4E79740 /* WorkSans-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 56E9FD4FA82146DEBEAC7491 /* WorkSans-SemiBold.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -439,6 +440,7 @@
 		8EFFF211764B4987940D6591 /* WorkSans-Regular.otf */ = {isa = PBXFileReference; name = "WorkSans-Regular.otf"; path = "../src/assets/fonts/WorkSans-Regular.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		7F83207FD9EC481C89D6CA3C /* WorkSans-Bold.otf */ = {isa = PBXFileReference; name = "WorkSans-Bold.otf"; path = "../src/assets/fonts/WorkSans-Bold.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		539DEC4355DA43C79C4381A7 /* WorkSans-Medium.otf */ = {isa = PBXFileReference; name = "WorkSans-Medium.otf"; path = "../src/assets/fonts/WorkSans-Medium.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		56E9FD4FA82146DEBEAC7491 /* WorkSans-SemiBold.otf */ = {isa = PBXFileReference; name = "WorkSans-SemiBold.otf"; path = "../src/assets/fonts/WorkSans-SemiBold.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -795,6 +797,7 @@
 				8EFFF211764B4987940D6591 /* WorkSans-Regular.otf */,
 				7F83207FD9EC481C89D6CA3C /* WorkSans-Bold.otf */,
 				539DEC4355DA43C79C4381A7 /* WorkSans-Medium.otf */,
+				56E9FD4FA82146DEBEAC7491 /* WorkSans-SemiBold.otf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -1306,6 +1309,7 @@
 				718A27D0DCAD472799F3C7DB /* WorkSans-Regular.otf in Resources */,
 				D39EB0149AC54110A6516C68 /* WorkSans-Bold.otf in Resources */,
 				2947A7A5865149DF84D01071 /* WorkSans-Medium.otf in Resources */,
+				CFCC67AC98884E87A4E79740 /* WorkSans-SemiBold.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

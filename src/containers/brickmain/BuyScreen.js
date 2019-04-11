@@ -1,6 +1,6 @@
 
 import React, { Component } from 'react';
-import { View, Text, Image, Platform, StatusBar, TouchableOpacity, Dimensions  } from 'react-native';
+import { View, Text, Image, TouchableOpacity, Dimensions  } from 'react-native';
 import { COLOR as colors } from 'react-native-material-ui';
 import styles from '../../styles/buy';
 import LeftArrow from '../../assets/images/leftarrow.png';
@@ -9,7 +9,6 @@ import Person from '../../assets/images/person.jpg';
 import ArrowRight from '../../assets/images/rightarrow.png';
 import LinearGradient from 'react-native-linear-gradient';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
-import Icon from 'react-native-vector-icons/MaterialIcons';
 
 const width = Dimensions.get('window').width;
 const height = Dimensions.get('window').height;
@@ -21,7 +20,6 @@ export class BuyScreen extends Component {
       elevation: 0,
       shadowOpacity: 0,
       borderBottomWidth: 0,
-      // paddingTop: Platform.OS === 'ios' ? 0 : StatusBar.currentHeight + 10,
       headerTintColor: colors.black,
       headerTitleStyle: { color: 'black' }
     },
@@ -59,12 +57,6 @@ export class BuyScreen extends Component {
     return (
       <View style={styles.mainBack}>
         <KeyboardAwareScrollView>
-          {/* <StatusBar
-            hidden={false}
-            animated
-            barStyle="dark-content"
-          /> */}
-
           <Text style={styles.title}>
             Review going
           </Text>
@@ -179,18 +171,20 @@ export class BuyScreen extends Component {
                 colors={['#FF5050', '#FB54AD']}
                 style={styles.buttonOuterContainer}
             >
-              <TouchableOpacity
-                style={styles.buttonContainer}
-                onPress={() => { this.props.navigation.navigate('DebitCard'); }}
-              >
-                  <Text style={styles.buttonText}>
-                    Confirm & Continue
-                  </Text>
-                  <Image
-                    source={ArrowRight}
-                    style={styles.arrow}
-                  />
-              </TouchableOpacity>
+              <View style={styles.buttonContainer}>
+                <TouchableOpacity
+                  style={styles.buttonTouchableContainer}
+                  onPress={() => { this.props.navigation.navigate('DebitCard'); }}
+                >
+                    <Text style={styles.buttonText}>
+                      Confirm & Continue
+                    </Text>
+                    <Image
+                      source={ArrowRight}
+                      style={styles.arrow}
+                    />
+                </TouchableOpacity>
+              </View>
             </LinearGradient>
           </View>
         </KeyboardAwareScrollView>

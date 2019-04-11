@@ -21,7 +21,6 @@ export class DebitCardScreen extends Component {
       elevation: 0,
       shadowOpacity: 0,
       borderBottomWidth: 0,
-      // paddingTop: Platform.OS === 'ios' ? 0 : StatusBar.currentHeight + 10,
       headerTintColor: colors.black,
       headerTitleStyle: { color: 'black' }
     },
@@ -212,8 +211,10 @@ export class DebitCardScreen extends Component {
           isVisible={this.state.isModalVisible}
           style={styles.bottomModal}
         >
-          <ScrollView style={styles.container}>
-            <View style={styles.innerMedelContainer}>
+          <View style={styles.outerScrollContainer}>
+          <ScrollView style={styles.scrollContainer}>
+            
+            <View style={styles.innerScrollContainer}>
               <TouchableOpacity style={styles.closebtn} onPress={this._toggleModal}>
                 <Image
                   style={styles.cls_image}
@@ -235,6 +236,7 @@ export class DebitCardScreen extends Component {
               <Text style={styles.headingtext}>Select from Chat</Text>
               <FlatList
                 horizontal
+                style={{ marginTop: 5 }}
                 data={this.state.selectFromChatList}
                 showsHorizontalScrollIndicator={false}
                 renderItem={({item}) => {
@@ -290,15 +292,21 @@ export class DebitCardScreen extends Component {
                   onChangeText={(e) => this.setState({ paymentId: e })}
                 />
               </View>
-              
+
               <View style={styles.bottomContainer}>
                 <LinearGradient
                   colors={['#FF5050', '#FB54AD']}
                   style={styles.createButton}
                 >
-                  <TouchableOpacity style={styles.buttonModelContainer} onPress={() => this._toggleModal()}>
+                  <TouchableOpacity
+                    style={styles.buttonModelContainer}
+                    onPress={() => {
+                      this._toggleModal();
+                      this.props.navigation.goBack(); 
+                    }}
+                  >
                       <Text style={styles.buttonModelText}>
-                        Create
+                        Confirm & Continue
                       </Text>
                   </TouchableOpacity>
                 </LinearGradient>
@@ -312,7 +320,9 @@ export class DebitCardScreen extends Component {
                 />
               </View>
             </View>
+            
           </ScrollView>
+          </View>
         </Modal>
       </View>
     )

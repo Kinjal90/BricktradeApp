@@ -31,10 +31,12 @@ const components = {
 
 const TabScreen = TabNavigator(components, {
   initialRouteName: 'Buy',
+  lazy: false,
+  swipeEnabled: false,
   animationEnabled: false,
   tabBarOptions: {
-    activeTintColor: 'rgb(254,0,138)',
-    inactiveTintColor: 'rgb(83,101,119)',
+    activeTintColor: '#FF5050',
+    inactiveTintColor: '#A9AEBE',
     activeBackgroundColor: 'white',
     inactiveBackgroundColor: 'white',
     iconStyle: {
@@ -45,15 +47,16 @@ const TabScreen = TabNavigator(components, {
     },
     upperCaseLabel: false,
     labelStyle: {
-      fontSize: 10,
+      fontSize: 12,
+      fontFamily: 'WorkSans-Medium',
+      lineHeight: 20,
+      letterSpacing: -0.3,
     },
     scrollEnabled: false,
     showIcon: true,
     showLabel: true,
     style: {
       borderTopColor: colors.grey100,
-      borderBottomWidth: 2,
-      backgroundColor: 'white',
     },
   },
   tabStyle: {
@@ -85,29 +88,36 @@ const TabScreen = TabNavigator(components, {
         return (idx == 2)
         ?
           (
-            <TouchableOpacity
-              key={idx}
-              style={{ padding: 10 }}
-              onPress={() => navigation.navigate('Buy')}
+            <View
+              style={{
+                padding: 20,
+              }}
             >
-              <LinearGradient
-                colors={['rgb(255,55,64)', 'rgb(255,55,119)', 'rgb(255, 44, 163)']}
+              <TouchableOpacity
+                key={idx}
                 style={{
-                  width: 60,
-                  height: 60,
-                  // backgroundColor: 'rgb(254,0,138)',
                   position: 'absolute',
-                  bottom: 0,
-                  borderRadius: 30,
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  alignSelf: 'center',
-                  zIndex: 999,
+                  bottom: 10,
+                  marginLeft: -10,
                 }}
+                onPress={() => navigation.navigate('Buy')}
               >
-                <Text style={{ color: colors.white }}>Buy</Text>
-              </LinearGradient>
-            </TouchableOpacity>
+                <LinearGradient
+                  colors={['rgb(255,55,64)', 'rgb(255,55,119)', 'rgb(255, 44, 163)']}
+                  style={{
+                    width: 60,
+                    height: 60,
+                    borderRadius: 30,
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    alignSelf: 'center',
+                    zIndex: 999,
+                  }}
+                >
+                  <Text style={{ color: colors.white }}>Buy</Text>
+                </LinearGradient>
+              </TouchableOpacity>
+            </View>
           )
         : 
           (
